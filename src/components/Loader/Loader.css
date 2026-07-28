@@ -1,0 +1,460 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* =========================
+   LOADER
+========================= */
+
+.loader{
+
+    position:fixed;
+
+    inset:0;
+
+    width:100%;
+
+    height:100vh;
+
+    background:#050505;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    overflow:hidden;
+
+    z-index:999999;
+
+}
+
+
+
+/* =========================
+   GRID
+========================= */
+
+.grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+    background-size:60px 60px;
+
+    animation:gridMove 12s linear infinite;
+
+}
+
+
+
+@keyframes gridMove{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(60px);
+
+}
+
+}
+
+
+
+/* =========================
+   GLOW
+========================= */
+
+.glow{
+
+position:absolute;
+
+width:600px;
+
+height:600px;
+
+border-radius:50%;
+
+background:
+
+radial-gradient(circle,
+
+rgba(212,175,55,.12),
+
+transparent 70%);
+
+filter:blur(20px);
+
+animation:pulse 3s infinite;
+
+}
+
+
+
+@keyframes pulse{
+
+0%{
+
+transform:scale(.9);
+
+opacity:.5;
+
+}
+
+50%{
+
+transform:scale(1.1);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:scale(.9);
+
+opacity:.5;
+
+}
+
+}
+
+
+
+/* =========================
+   BUILDING
+========================= */
+
+.building{
+
+position:relative;
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+z-index:5;
+
+}
+
+
+
+/* =========================
+   ROOF
+========================= */
+
+.roof{
+
+width:70px;
+
+height:40px;
+
+display:flex;
+
+justify-content:center;
+
+align-items:flex-end;
+
+}
+
+
+
+.roof-top{
+
+width:0;
+
+height:0;
+
+border-left:35px solid transparent;
+
+border-right:35px solid transparent;
+
+border-bottom:35px solid #ffffff;
+
+filter:drop-shadow(0 0 12px rgba(255,255,255,.2));
+
+}
+
+
+
+/* =========================
+   TOWER
+========================= */
+
+.tower{
+
+display:flex;
+
+flex-direction:column-reverse;
+
+align-items:center;
+
+gap:4px;
+
+}
+
+
+
+.tower-floor{
+
+width:120px;
+
+height:28px;
+
+background:#ffffff;
+
+border-radius:2px;
+
+display:grid;
+
+grid-template-columns:repeat(6,1fr);
+
+gap:5px;
+
+padding:5px;
+
+transform-origin:bottom;
+
+box-shadow:
+
+0 0 15px rgba(255,255,255,.05);
+
+}
+
+
+
+/* =========================
+   PODIUM
+========================= */
+
+.podium{
+
+margin-top:6px;
+
+display:flex;
+
+flex-direction:column-reverse;
+
+gap:5px;
+
+}
+
+
+
+.podium-floor{
+
+width:210px;
+
+height:32px;
+
+background:#ffffff;
+
+display:grid;
+
+grid-template-columns:repeat(10,1fr);
+
+gap:5px;
+
+padding:5px;
+
+border-radius:2px;
+
+transform-origin:bottom;
+
+}
+
+
+
+/* =========================
+   WINDOWS
+========================= */
+
+.window{
+
+background:#0d0d0d;
+
+border-radius:1px;
+
+transition:.3s;
+
+animation:windowLight 2s infinite alternate;
+
+}
+
+
+
+@keyframes windowLight{
+
+0%{
+
+background:#101010;
+
+}
+
+100%{
+
+background:#d4af37;
+
+box-shadow:
+
+0 0 8px #d4af37;
+
+}
+
+}
+
+
+
+/* =========================
+   FOUNDATION
+========================= */
+
+.foundation{
+
+width:260px;
+
+height:10px;
+
+background:#d4af37;
+
+margin-top:12px;
+
+border-radius:20px;
+
+box-shadow:
+
+0 0 20px rgba(212,175,55,.5);
+
+}
+
+
+
+/* =========================
+   COMPANY
+========================= */
+
+.company{
+
+position:absolute;
+
+bottom:80px;
+
+left:50%;
+
+transform:translateX(-50%);
+
+text-align:center;
+
+}
+
+
+
+.company h1{
+
+color:#fff;
+
+font-size:42px;
+
+font-weight:800;
+
+letter-spacing:6px;
+
+}
+
+
+
+.company span{
+
+display:block;
+
+font-size:14px;
+
+letter-spacing:10px;
+
+margin-top:8px;
+
+color:#d4af37;
+
+}
+
+
+
+.company p{
+
+margin-top:20px;
+
+font-size:15px;
+
+letter-spacing:8px;
+
+color:#9d9d9d;
+
+}
+
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+.tower-floor{
+
+width:90px;
+
+height:22px;
+
+}
+
+.podium-floor{
+
+width:160px;
+
+height:26px;
+
+}
+
+.foundation{
+
+width:190px;
+
+}
+
+.company h1{
+
+font-size:28px;
+
+}
+
+.company p{
+
+font-size:12px;
+
+letter-spacing:4px;
+
+}
+
+}

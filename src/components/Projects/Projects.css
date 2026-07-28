@@ -1,0 +1,410 @@
+/* ======================================
+   PROJECTS
+====================================== */
+
+.projects{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    padding:140px 0;
+
+    background:#050505;
+
+    overflow:hidden;
+
+}
+
+
+/* ======================================
+   GRID
+====================================== */
+
+.projects-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+    opacity:.35;
+
+}
+
+
+/* ======================================
+   CONTAINER
+====================================== */
+
+.projects-container{
+
+    width:90%;
+
+    max-width:1450px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+
+.projects-container h2{
+
+    color:white;
+
+    font-size:60px;
+
+    margin-bottom:70px;
+
+    max-width:750px;
+
+}
+
+
+/* ======================================
+   GRID
+====================================== */
+
+.projects-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:35px;
+
+}
+
+
+/* ======================================
+   CARD
+====================================== */
+
+.project-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:24px;
+
+    cursor:pointer;
+
+    min-height:520px;
+
+    background:#111;
+
+    box-shadow:
+
+    0 25px 60px rgba(0,0,0,.45);
+
+}
+
+
+.project-card img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1s;
+
+}
+
+
+.project-card:hover img{
+
+    transform:scale(1.12);
+
+}
+
+
+/* ======================================
+   GOLD LIGHT
+====================================== */
+
+.project-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    transparent,
+
+    rgba(255,255,255,.28),
+
+    transparent
+
+    );
+
+    transition:1s;
+
+    z-index:5;
+
+}
+
+
+.project-card:hover::before{
+
+    left:160%;
+
+}
+
+
+/* ======================================
+   OVERLAY
+====================================== */
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    flex-direction:column;
+
+    padding:40px;
+
+    background:
+
+    linear-gradient(
+
+    to top,
+
+    rgba(0,0,0,.92),
+
+    rgba(0,0,0,.15),
+
+    transparent
+
+    );
+
+    transition:.5s;
+
+}
+
+
+.project-card:hover .overlay{
+
+    background:
+
+    linear-gradient(
+
+    to top,
+
+    rgba(0,0,0,.96),
+
+    rgba(0,0,0,.35),
+
+    transparent
+
+    );
+
+}
+
+
+/* ======================================
+   YEAR
+====================================== */
+
+.year{
+
+    width:85px;
+
+    text-align:center;
+
+    padding:8px;
+
+    border-radius:40px;
+
+    background:#d4af37;
+
+    color:black;
+
+    font-weight:bold;
+
+    margin-bottom:22px;
+
+}
+
+
+/* ======================================
+   TITLE
+====================================== */
+
+.overlay h3{
+
+    color:white;
+
+    font-size:38px;
+
+    margin-bottom:18px;
+
+}
+
+
+/* ======================================
+   LOCATION
+====================================== */
+
+.overlay p{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    color:#ddd;
+
+    font-size:18px;
+
+}
+
+
+.overlay svg{
+
+    color:#d4af37;
+
+}
+
+
+/* ======================================
+   BUTTON
+====================================== */
+
+.overlay button{
+
+    width:210px;
+
+    margin-top:35px;
+
+    height:58px;
+
+    border:none;
+
+    border-radius:50px;
+
+    background:#d4af37;
+
+    color:black;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:12px;
+
+}
+
+
+.overlay button:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 0 25px rgba(212,175,55,.45);
+
+}
+
+
+/* ======================================
+   RESPONSIVE
+====================================== */
+
+@media(max-width:1000px){
+
+.projects-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+.projects-container h2{
+
+font-size:45px;
+
+}
+
+.project-card{
+
+min-height:420px;
+
+}
+
+}
+
+
+@media(max-width:700px){
+
+.overlay{
+
+padding:25px;
+
+}
+
+.overlay h3{
+
+font-size:28px;
+
+}
+
+.overlay p{
+
+font-size:15px;
+
+}
+
+.overlay button{
+
+width:170px;
+
+height:50px;
+
+}
+
+}

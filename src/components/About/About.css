@@ -1,0 +1,362 @@
+/* ===========================
+   ABOUT
+=========================== */
+
+.about{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:#0b0b0b;
+
+    overflow:hidden;
+
+    padding:140px 0;
+
+}
+
+
+/* ===========================
+   GRID
+=========================== */
+
+.about-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+    background-size:60px 60px;
+
+    opacity:.4;
+
+}
+
+
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+
+    width:90%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:80px;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+
+
+/* ===========================
+   LEFT
+=========================== */
+
+.section-title{
+
+    color:#d4af37;
+
+    letter-spacing:8px;
+
+    font-size:15px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.about-left h2{
+
+    color:white;
+
+    font-size:58px;
+
+    line-height:1.1;
+
+    margin-bottom:35px;
+
+}
+
+
+
+.about-text{
+
+    color:#a7a7a7;
+
+    line-height:2;
+
+    font-size:18px;
+
+    max-width:600px;
+
+}
+
+
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.about-left button{
+
+    margin-top:45px;
+
+    background:#d4af37;
+
+    color:black;
+
+    border:none;
+
+    padding:18px 40px;
+
+    border-radius:60px;
+
+    cursor:pointer;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:.35s;
+
+}
+
+
+
+.about-left button:hover{
+
+    transform:translateY(-6px);
+
+    box-shadow:
+
+    0 0 30px rgba(212,175,55,.45);
+
+}
+
+
+
+/* ===========================
+   IMAGE
+=========================== */
+
+.image-box{
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:20px;
+
+}
+
+
+
+.image-box img{
+
+    width:100%;
+
+    display:block;
+
+    transition:.7s;
+
+}
+
+
+
+.image-box:hover img{
+
+    transform:scale(1.08);
+
+}
+
+
+
+/* ===========================
+   GOLD FRAME
+=========================== */
+
+.gold-border{
+
+    position:absolute;
+
+    inset:18px;
+
+    border:2px solid #d4af37;
+
+    pointer-events:none;
+
+    animation:borderFloat 4s ease-in-out infinite;
+
+}
+
+
+
+@keyframes borderFloat{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+50%{
+
+transform:translateY(-10px);
+
+}
+
+100%{
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/* ===========================
+   STATS
+=========================== */
+
+.stats{
+
+    margin-top:35px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+}
+
+
+
+.stats div{
+
+    flex:1;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:18px;
+
+    padding:30px;
+
+    text-align:center;
+
+    transition:.35s;
+
+}
+
+
+
+.stats div:hover{
+
+    transform:translateY(-10px);
+
+    border-color:#d4af37;
+
+}
+
+
+
+.stats h3{
+
+    color:#d4af37;
+
+    font-size:42px;
+
+}
+
+
+
+.stats span{
+
+    color:#cfcfcf;
+
+    letter-spacing:3px;
+
+}
+
+
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:1000px){
+
+.container{
+
+grid-template-columns:1fr;
+
+}
+
+.about-left{
+
+text-align:center;
+
+}
+
+.about-text{
+
+margin:auto;
+
+}
+
+.about-left button{
+
+margin:auto;
+
+margin-top:40px;
+
+}
+
+.stats{
+
+flex-direction:column;
+
+}
+
+.about-left h2{
+
+font-size:42px;
+
+}
+
+}

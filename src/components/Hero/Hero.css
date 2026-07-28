@@ -1,0 +1,317 @@
+.hero{
+
+    position:relative;
+
+    width:100%;
+
+    height:100vh;
+
+    background:
+
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.85)),
+
+    url("/images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    overflow:hidden;
+
+}
+
+
+
+/* Overlay */
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle at center,
+
+    rgba(212,175,55,.12),
+
+    transparent 60%);
+
+}
+
+
+
+/* Blueprint Grid */
+
+.hero-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+
+    linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),
+
+    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+    animation:gridMove 18s linear infinite;
+
+    opacity:.45;
+
+}
+
+
+
+@keyframes gridMove{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(70px);
+
+    }
+
+}
+
+
+
+/* محتوا */
+
+.hero-content{
+
+    position:relative;
+
+    z-index:10;
+
+    width:90%;
+
+    max-width:1300px;
+
+    height:100%;
+
+    margin:auto;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+
+
+.hero-content p{
+
+    color:#d4af37;
+
+    font-size:18px;
+
+    letter-spacing:8px;
+
+    margin-bottom:20px;
+
+}
+
+
+
+.hero-content h1{
+
+    font-size:clamp(60px,8vw,120px);
+
+    line-height:1;
+
+    font-weight:800;
+
+    color:white;
+
+    max-width:900px;
+
+    text-transform:uppercase;
+
+}
+
+
+
+.hero-content span{
+
+    margin-top:30px;
+
+    color:#cfcfcf;
+
+    font-size:20px;
+
+    letter-spacing:3px;
+
+}
+
+
+
+/* Buttons */
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:20px;
+
+    margin-top:60px;
+
+}
+
+
+
+.hero-buttons button{
+
+    cursor:pointer;
+
+    border:none;
+
+    transition:.35s;
+
+    padding:18px 38px;
+
+    font-size:17px;
+
+    border-radius:60px;
+
+}
+
+
+
+.btn-primary{
+
+    background:#d4af37;
+
+    color:black;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    font-weight:bold;
+
+}
+
+
+
+.btn-primary:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+
+    0 0 30px rgba(212,175,55,.55);
+
+}
+
+
+
+.btn-secondary{
+
+    background:rgba(255,255,255,.08);
+
+    border:1px solid rgba(255,255,255,.2) !important;
+
+    color:white;
+
+    backdrop-filter:blur(18px);
+
+}
+
+
+
+.btn-secondary:hover{
+
+    background:white;
+
+    color:black;
+
+}
+
+
+
+/* خطوط کناری */
+
+.line{
+
+    position:absolute;
+
+    top:0;
+
+    width:1px;
+
+    height:100%;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+
+
+.line.left{
+
+    left:100px;
+
+}
+
+
+
+.line.right{
+
+    right:100px;
+
+}
+
+
+
+/* Responsive */
+
+@media(max-width:900px){
+
+.hero-content{
+
+align-items:center;
+
+text-align:center;
+
+}
+
+.hero-content h1{
+
+font-size:55px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+width:100%;
+
+}
+
+.hero-buttons button{
+
+width:100%;
+
+}
+
+.line{
+
+display:none;
+
+}
+
+}

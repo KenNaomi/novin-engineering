@@ -1,0 +1,313 @@
+/* ===============================
+   SERVICES
+=============================== */
+
+.services{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    background:#090909;
+
+    overflow:hidden;
+
+    padding:140px 0;
+
+}
+
+
+/* ===============================
+   GRID
+=============================== */
+
+.services-grid{
+
+    position:absolute;
+
+    inset:0;
+
+    background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+
+    background-size:70px 70px;
+
+    opacity:.35;
+
+}
+
+
+/* ===============================
+   CONTAINER
+=============================== */
+
+.services-container{
+
+    width:90%;
+
+    max-width:1450px;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:10;
+
+}
+
+
+.services-container h2{
+
+    color:white;
+
+    font-size:60px;
+
+    margin-bottom:70px;
+
+}
+
+
+/* ===============================
+   GRID
+=============================== */
+
+.services-list{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+
+/* ===============================
+   CARD
+=============================== */
+
+.service-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    padding:45px;
+
+    border-radius:22px;
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    backdrop-filter:blur(16px);
+
+    transition:.45s;
+
+}
+
+
+.service-card:hover{
+
+    transform:translateY(-12px);
+
+    border-color:#d4af37;
+
+    box-shadow:
+
+    0 20px 45px rgba(0,0,0,.45);
+
+}
+
+
+/* طلایی متحرک */
+
+.service-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-100%;
+
+    top:0;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(90deg,
+
+    transparent,
+
+    rgba(212,175,55,.18),
+
+    transparent);
+
+    transition:.8s;
+
+}
+
+
+.service-card:hover::before{
+
+    left:100%;
+
+}
+
+
+/* ===============================
+   NUMBER
+=============================== */
+
+.bg-number{
+
+    position:absolute;
+
+    top:-20px;
+
+    right:20px;
+
+    font-size:90px;
+
+    font-weight:900;
+
+    color:rgba(255,255,255,.03);
+
+    user-select:none;
+
+}
+
+
+/* ===============================
+   ICON
+=============================== */
+
+.icon{
+
+    width:75px;
+
+    height:75px;
+
+    border-radius:20px;
+
+    background:#d4af37;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+    color:black;
+
+    margin-bottom:30px;
+
+    transition:.4s;
+
+}
+
+
+.service-card:hover .icon{
+
+    transform:rotate(10deg) scale(1.1);
+
+}
+
+
+/* ===============================
+   TEXT
+=============================== */
+
+.service-card h3{
+
+    color:white;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+}
+
+
+.service-card p{
+
+    color:#b8b8b8;
+
+    line-height:1.9;
+
+    margin-bottom:35px;
+
+}
+
+
+/* ===============================
+   BUTTON
+=============================== */
+
+.service-card button{
+
+    background:none;
+
+    border:none;
+
+    color:#d4af37;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+
+.service-card:hover button{
+
+    transform:translateX(10px);
+
+}
+
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media(max-width:1100px){
+
+.services-list{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.services-list{
+
+grid-template-columns:1fr;
+
+}
+
+.services-container h2{
+
+font-size:42px;
+
+}
+
+.service-card{
+
+padding:30px;
+
+}
+
+}
