@@ -35,7 +35,6 @@ export default function Hero() {
           <br />
           WE CREATE LANDMARKS
         </motion.h1>
-
         <motion.span
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -45,48 +44,32 @@ export default function Hero() {
         >
           Architecture • Civil Engineering • Innovation
         </motion.span>
-
         <motion.div
           className="hero-buttons"
-
           initial={{
             opacity:0,
             y:30
           }}
-
           animate={{
             opacity:1,
             y:0
           }}
-
           transition={{
             delay:1.4
           }}
-
         >
-
           <button className="btn-primary">
-
             Explore Projects
-
             <FaArrowRight/>
-
           </button>
-
           <button className="btn-secondary">
-
             Contact Us
-
           </button>
-
         </motion.div>
-
       </div>
-
       {/* خطوط تزئینی */}
       <div className="line left"></div>
       <div className="line right"></div>
-
     </section>
   );
 }

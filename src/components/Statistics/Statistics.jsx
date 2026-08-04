@@ -9,17 +9,17 @@ const stats = [
     title: "Completed Projects",
   },
   {
-    number: 18,
+    number: 20,
     suffix: "+",
     title: "Years Experience",
   },
   {
-    number: 97,
+    number: 100,
     suffix: "%",
     title: "Client Satisfaction",
   },
   {
-    number: 42,
+    number: 20,
     suffix: "",
     title: "Professional Engineers",
   },

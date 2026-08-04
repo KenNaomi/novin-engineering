@@ -1,0 +1,47 @@
+*{
+cursor:none;
+}
+
+
+.engineering-cursor{
+
+position:fixed;
+
+width:30px;
+height:30px;
+
+border:2px solid #00eaff;
+
+border-radius:50%;
+
+pointer-events:none;
+
+z-index:999999;
+
+transform:translate(-50%, -50%);
+
+will-change:left, top;
+
+box-shadow:
+0 0 10px rgba(0,234,255,.8);
+
+}
+
+
+.engineering-cursor span{
+
+position:absolute;
+
+width:7px;
+height:7px;
+
+background:#00eaff;
+
+border-radius:50%;
+
+left:50%;
+top:50%;
+
+transform:translate(-50%,-50%);
+
+}

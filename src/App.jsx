@@ -7,6 +7,8 @@ import Services from "./components/Services/Services";
 import Projects from "./components/Projects/Projects";
 import Statistics from "./components/Statistics/Statistics";
 import Footer from "./components/Footer/Footer";
+import EngineeringCursor from "./components/EngineeringCursor/EngineeringCursor";
+import EngineeringBackground from "./components/EngineeringBackground/EngineeringBackground";
 function App() {
 
   return (
@@ -29,6 +31,10 @@ function App() {
       <Statistics />
 
       <Footer/>
+      
+      <EngineeringBackground/>
+
+      <EngineeringCursor/>
 
     </>
   );
